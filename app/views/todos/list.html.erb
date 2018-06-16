@@ -1,0 +1,22 @@
+<div class="row">
+  <h1>No Completados</h1>
+  <div class="col-md-6">
+    <% @nocompleted.each do |c| %>
+
+    <div class="well">
+    <h1><%= c.description %></h1>
+    <p><%= c.completed %></p>
+  </div>
+    <% end %>
+  </div>
+  <h1> Completados</h1>
+  <div class="col-md-6">
+
+    <% @completed.each do |c| %>
+    <div class="well">
+      <h1><%= c.description %></h1>
+      <p><%= c.completed %></p>
+    </div>
+    <% end %>
+  </div>
+</div>

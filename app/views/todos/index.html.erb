@@ -1,0 +1,10 @@
+<% @todos.each do |i| %>
+  <div class="well" >
+    <h1><%= link_to i.description, i %></h1>
+    <h2><%= i.completed %></h2>
+    <%= link_to "Completar", completed_path(i), class:'btn btn-primary' %>
+    <%= link_to "Edit", edit_path(i), class:'btn btn-success' %>
+    <%= link_to "Borrar", i, method: :delete, class:'btn btn-danger' %>
+  </div>
+<% end %>
+<%= link_to "Crear una Tarea", todos_new_path, class:'btn btn-info' %>
